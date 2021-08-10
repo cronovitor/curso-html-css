@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 282</title>
+</head>
+<body>
+
+  <h1>aula 282</h1>
+  
+</body>
+<script>
+
+  var nome = "vitor alves carneiro";
+
+  var nomeFormatado = formatarNome(nome);
+
+  function formatarNome(nome){
+
+    var posicaoUltimoEspaco = nome.lastIndexOf(' ');
+
+    if(posicaoUltimoEspaco <= 0) {
+
+      return nome;
+
+    }
+
+    var ultimoNome = nome.slice(posicaoUltimoEspaco);
+
+    console.log(ultimoNome)
+
+    var primeiroNome = nome.slice(0, posicaoUltimoEspaco + 1);
+
+    console.log(primeiroNome)
+
+    return ultimoNome + ', ' + primeiroNome
+
+  }
+
+  console.log(nomeFormatado)
+
+</script>
+</html>

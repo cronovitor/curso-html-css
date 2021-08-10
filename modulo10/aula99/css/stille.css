@@ -1,0 +1,58 @@
+body{
+
+  background-color: yellow;
+  font-size: 16px;
+
+}
+
+.teste{
+
+  background-color: red;
+  width: 320px;
+  height: 50px;
+
+}
+
+.container{
+
+  background-color: white;
+  padding: 15px;
+  font-size: 24px;
+
+}
+
+.container div{
+
+  background-color: #ccc;
+  margin-bottom: 15px;
+  height: 150px;
+  font-size: 22px;
+
+}
+
+.clearfix::after{ /*dessa forma que eu vou formatar meu float de agora em diante para eu não precisar usar o overflow */
+
+  content: ' ';
+  display: block;
+  clear: both;
+
+}
+
+@media screen and (min-width:600px){
+/*com essa sintaxe do media querie eu estou fazendo o seguinte quando minha pagina estiver aparecendo em uma tela e tiver o min de largura de 1000px ele vai ficar laranja*/
+
+  body{
+
+    background-color: orange;
+
+  }
+
+  .container div{
+
+    width: 48%;/*e dessa forma eu consigo colocar uma margin separando as duas divs quando elas estiverem uma do lado da outra eu faço o calculo que cada uma vai ter 48% de tamanho dentro da div*/
+    margin: 1%; /*na ma margin eu coloco 1% para que cada elemento tenha 1% e somando como são 2 divs tudo vai dar 100% di espaço da minha tela*/
+    float: left;
+
+  }
+
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>exercicio</h1>
+
+</body>
+
+<script>
+
+  var numeros = new Array(25, 30, 45, 28, 0, 12, 78, 64);
+
+  var somaOsPares = somaOsPares(numeros)
+
+  alert('a soma dos pares das arrays é' + somaOsPares)
+
+
+
+  function somaOsPares(arr) {
+
+    var soma = 0;
+
+    for (var i = 0; i < arr.length; i++) {
+
+      console.log(i);
+
+      console.log(arr[i]);
+
+
+      if (!isNaN(arr[i]) && arr[i] % 2 === 0) {
+
+        soma += arr[i];
+
+      }
+
+    }
+
+   return soma
+
+  }
+
+  
+
+
+
+</script>
+
+</html>

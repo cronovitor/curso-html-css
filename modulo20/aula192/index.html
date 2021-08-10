@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 192</title>
+</head>
+
+<body>
+
+  <h1>aula 192</h1>
+
+  <button onclick="mostrarTabuada()">Criar tabuada</button>
+
+  <button onclick="limparTabuada()">Limpar tabuada</button>
+
+  <div id="output"></div>
+
+  <script>
+
+    var mensagem = '';
+
+    var output = document.querySelector('#output');
+
+    function mostrarTabuada() {
+
+      var n = prompt("digite um numero");
+
+      limparTabuada()
+
+      n = parseFloat(n);
+
+      var i = 1;
+
+      while (i <= 1000) {
+
+        mensagem += n + ' x ' + i + ' = ' + n * i + '<br>';
+
+        i++
+
+      }
+
+      output.innerHTML = mensagem;
+
+    }
+
+
+    function limparTabuada() {
+
+      mensagem = '';
+
+      output.innerHTML = mensagem;
+
+    }
+
+  </script>
+
+</body>
+
+</html>

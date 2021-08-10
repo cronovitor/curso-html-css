@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pratica</title>
+</head>
+<body>
+
+  <h1>pratica</h1>
+
+  <div class="containder">
+
+    <form action="#" method="POST">
+
+      <label for="txtUser">Usuario</label>
+
+      <input type="text" id="txtUser" name="user">
+
+      <br>
+
+      <label for="txtPass">Password</label>
+
+      <input type="password" id="txtPass" name="pass">
+
+      <br>
+
+      <button type="submit">Logar</button>
+
+    </form>
+
+  </div>
+
+  
+</body>
+
+
+
+
+<script>
+
+(function(){
+
+  var $form = document.querySelector('form');
+
+  var $txtUser = document.getElementById('txtUser');
+
+  var $txtPass = document.getElementById('txtPass');
+
+  var $btn = document.getElementById('btn')
+
+  $form.addEventListener('submit', function(e){
+
+    if(!$txtUser.value || !$txtPass.value){
+
+      alert('campo(s) vazio(s)');
+
+      e.preventDefault;
+
+    }
+
+  })
+
+})()
+
+
+
+
+</script>
+</html>

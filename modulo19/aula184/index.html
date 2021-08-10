@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 184</title>
+</head>
+
+<body>
+
+  <h1>aula 184</h1>
+
+  <script>
+
+
+    var num = prompt("digite um numero");
+
+    num = parseInt(num);
+
+    
+   
+    /*
+
+    dessa forma mesma que o indice seja maior do que a condição do meu while ele ira executar pelo menos uma vez
+
+    var indice = 1001;
+    
+    do {
+
+      document.write(num + ' x ' + indice + ' = ' + (num * indice) + '<br>');
+
+      indice = indice + 1;
+
+
+    } while (indice <= 1000)
+
+    document.write('saiu do loop');
+
+    */
+
+
+    // agora vamos trabalhar  'for' que e a forma e a forma abreveada de fazer uma função de loop
+
+
+    for(var indice = 1; indice <= 1000; indice++){
+
+      document.write(num + ' x ' + indice + ' = ' + (num * indice) + '<br>');
+
+    }
+
+    document.write('saiu do loop')
+
+    //essa e a função simplificada da ultima aula aonde criamos todas as condições da função de uma vez des da criação da variavel ate o incremento do indice
+
+  </script>
+
+</body>
+
+</html>

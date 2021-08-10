@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 177</title>
+</head>
+<body>
+
+  <h1>aula 177</h1>
+
+  <script>
+
+    var num1 = prompt("Digite sua nota");
+
+    num1 = parseFloat(num1);
+
+    var num2 = prompt("Digite sua nota");
+
+    num2 = parseFloat(num2);
+
+    if(num1 === 0 || num2 === 0){
+
+      alert("Reprovado")
+
+    } else {
+
+      var media = (num1 + num2) / 2
+
+      if(media >= 5){
+
+        alert("Parabens aprovado!")
+
+      }
+
+      else{
+
+      alert("Reprovado!")
+
+      }
+
+    }
+
+
+    /*
+    
+      resolução do professor:
+
+      var n1 = prompt('digite um número');
+        n1 =  parseFloat(n1);
+        
+        var n2 = parseFloat(prompt('digite outro número'));
+        
+        var media = (n1 + n2) / 2;
+        
+            
+        if(media > 5 && n1 > 0 && n2 > 0){
+            alert("Parabéns! Você foi aprovado");
+        } else {
+            alert("Descupe, mas não foi dessa vez");
+        } 
+    
+    */
+
+
+  </script>
+  
+</body>
+</html>

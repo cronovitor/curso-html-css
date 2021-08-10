@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exercios</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+
+  <div id="principal">
+    <!-- dessa forma vou criar o cabeçario do site com o menu de navegação principal que ficara no canto superior direito do site com essa div-->
+    <!--obs: coloquei um id aqui para localizar o elemento e estilizalo com css-->
+    <header class="hero">
+      <!-- como vai ser o cabeçario do site deve ser colocado na tag header -->
+      <nav>
+        <!--como esse elemento vai ser o menu de navegação deve ficar na tag nav-->
+        <ul>
+          <li><a href="index.html">inicio</a></li>
+          <li><a href="#">Projetos</a></li>
+          <li><a href="#">Quem sou</a></li>
+          <li><a href="#">Contato</a></li>
+
+        </ul>
+      </nav>
+
+      <div class="hero-content">
+        <!-- com essa div vou criar o titulo do site-->
+        <h1>Curso Web Fundamentos</h1>
+        <p>Aprenda HTML, CSS e Javascript</p>
+      </div>
+    </header>
+
+    <main>
+      <!-- aqui eu irei colocar o conteudo principal da pagina-->
+
+      <section class="content-section">
+        <!--aqui vou abrir uma section para comportar um pequeno menu de cards-->
+        <!-- aqui sera criada 3 divs aonde cada uma vai conter uma imagem e um paragrafo e todas vão ter uma classe card para estilização no css-->
+        <div class="card card-1">
+          <img src="imgs/card_01.png" alt="">
+          <p>Seletores</p>
+
+        </div>
+
+        <div class="card card-2">
+          <img src="imgs/card_02.jpg" alt="">
+          <p>Pocisionamento</p>
+
+        </div>
+
+        <div class="card card-3">
+          <img src="imgs/card_03.jpg" alt="">
+          <p>Fontes</p>
+
+        </div>
+
+
+      </section>
+
+      <section class="content-section">
+        <!-- aqui sera criada uma section para conter o conteudo principal do texte-->
+        <article>
+          <!--como e o conteudo principal do texte ele deve ser colocado dentro de uma tag article-->
+          <header>
+            <!--usamos a tag header para criar o titulo do article-->
+            <h2>Titulo do Article</h2><!-- usar h2 ou maior para criar subtitulos-->
+          </header>
+          <p>Paragrafo 1</p>
+          <p>Paragrafo 2</p>
+        </article>
+
+      </section>
+    </main>
+
+    <footer>
+      <!--aqui fica o tag footer para conter o rodape do site contendo algumas informação por exemplo o copyright-->
+      <p>copyright &copy; 2021</p>
+
+    </footer>
+
+  </div>
+
+</body>
+
+</html>

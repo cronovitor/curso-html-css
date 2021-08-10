@@ -1,0 +1,56 @@
+body{
+
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+label{
+
+  margin-right: 25px; /*aqui estou dando um espaço para a direira para distanciar meus elementos um dos outros*/
+
+}
+
+label span{/*aqui eu estou criando o elemento ovalado que vai ser o nosso checkbox*/
+
+  display: inline-block; /*aqui e para os elementos continuarem em linha*/
+  width: 60px;
+  height: 30px;
+  background: #ccc;
+  border-radius: 15px; /*aqui e para apenas arredondar as bordas usamos 15px porque e a metade da altura*/
+
+}
+
+label span::before{/*aqui eu vou criar a bolinha que vai ficar dentro do checkbox*/
+
+  content: '';/*como estou usando ::before eu obrigatoriamente tenho que usar um content mesmo que o mesmo esteja vazio*/
+  display: block;/*display block para o elemento se comportar como elemento de bloco*/
+  background: #eee;
+  width: 20px; /*aqui vai ser 20px porque vai ter 5 de margin em cima em 5 em baixo e vai somar vai dar os 30 que e o tamanho do elemento do span*/
+  height: 20px;
+  border-radius: 50%;/*aqui vai arredondar meu elemento para ele ficar totalmente esferico*/
+  margin: 5px;/*aqui esta a margin qem cima e em baixo para somar com os 20 da bolinha e deixar a bolinha exatamente no meio do nosso elemento span*/
+  transition: all .2s ease-in-out; /*aqui eu vou animar todos os elementos para fazer nossa bolinha deslizar suavemente pra direita em vez de ir bruscamente como e o padrão*/
+
+}
+
+label input:checked + span::before{/*aqui eu vou selecionar o span que detro do input no label mais quando o input estiver checked ou seja selecionado*/
+
+  transform: translateX(30px); /*aqui eu vou fazer a bolinha deslocar 30px para a direira (valores positivos vai par direita valores negativos esquerda)*/
+  background: cadetblue;
+
+}
+
+label input:focus + span{ /*aqui eu estou selecionando meu input quando ele tiver em focus ou seja selecionado*/
+
+  box-shadow: 0 0 0 2px red; /*aqui eu coloquei o box-shadow para criar uma borda quando o meu checkbox estiver selecionado nos usamos o box-shadow pq ele mantem todas as configurações do nosso elemento*/
+
+}
+
+input{/*aqui eu irei esconder o input para deixar apenas o elemento span visivel*/
+
+  opacity: 0; /*aqui eu coloco a opacity 0 para ele deixar meu elemento invisivel mais ainda deixar ele selecionavel na tela*/
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+
+}

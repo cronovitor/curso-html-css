@@ -1,0 +1,128 @@
+html, body{
+
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+}
+
+.div1{
+
+  width: 150px;
+  height: 50px;
+  background-color: red;
+  transform: translate(20%, 50%);
+  /*
+  position: relative;
+  top: 50px;
+  left: 50px;
+  */
+
+}
+
+.div2{
+
+  width: 150px;
+  height: 50px;
+  background-color: blue;
+  position: relative;
+  left: 50%;
+
+}
+
+.div3{
+
+  width: 50px;
+  overflow: hidden;
+  border: solid 2px black;
+
+}
+
+.div3-interna{
+
+  background-color: yellow;
+  transform: translatex(80%, 55px);
+
+}.div4{
+
+  width: 200px;
+  overflow: hidden;
+  border: solid 2px black;
+
+}
+
+.div4-interna{
+
+  background-color: yellow;
+  transform: rotate(-25deg);
+
+}
+
+.div5{
+
+  width: 200px;
+  overflow: hidden;
+  border: solid 2px black;
+
+}
+
+.div5-interna{
+
+  background-color: yellow;
+  transform: rotate(-25deg);
+  transform-origin: left top;
+
+}
+
+.div6{
+
+  width: 200px;
+  overflow: hidden;
+  border: solid 2px black;
+
+}
+
+.div6-interna{
+
+  background-color: yellow;
+  transform: rotate(30deg) translate(50%);
+
+}
+
+.div7{
+
+  width: 200px;
+  overflow: hidden;
+  border: solid 2px black;
+
+}
+
+.div7-interna{
+
+  background-color: yellow;
+  transform: translate(60%) rotate(40deg) ;
+
+}
+
+.div8{
+
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  transform: skewY(-30deg);
+}
+
+.div9{
+
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  transform: scale(.6) translatex(50%);
+  transition: transform .5s;
+}
+
+.div9:hover{
+
+  transform: scale(2);
+
+}

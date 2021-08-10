@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 308</title>
+</head>
+<body>
+
+ <h1>aula 308</h1>
+
+ <div class="relogio"></div>
+
+ <script>
+
+  (function(){
+
+    var $relogio = document.querySelector('.relogio');
+
+    function getHour(){
+
+      var data = new Date();
+
+      var hora = formataT(data.getHours());
+
+      var minu = formataT(data.getMinutes());
+
+      var segu = formataT(data.getSeconds());
+
+      return hora + ':' + minu + ':' + segu;
+
+    };
+
+    function formataT(tempo){
+
+      return tempo < 10 ? '0' + tempo : tempo;
+
+    }
+
+    function mostraRelogio(atual){
+
+      $relogio.textContent = atual;
+
+    }
+
+    mostraRelogio(getHour());
+
+    setInterval(function(){
+
+      mostraRelogio(getHour())
+
+    }, 1000)
+
+  })();
+
+ </script>
+  
+</body>
+</html>

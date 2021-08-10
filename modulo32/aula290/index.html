@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 290</title>
+</head>
+
+<body>
+
+  <h1>aula 290</h1>
+
+  <script>
+
+    var arr = ['1', 2, 3,'haushaus', 4,'iaia', 5, '10']
+
+    var sohNumeros = arr.every(function (el) {
+
+      return typeof el === 'number';
+
+    })
+
+    console.log(sohNumeros)
+
+    var aoMenosUmNumero = arr.some(function (el) {
+
+      return typeof el === 'number';
+
+    })
+
+    console.log(aoMenosUmNumero)
+
+    var numeros = arr.filter(function (el, indice, array) {
+
+      return typeof el === 'number';
+
+    })
+
+    console.log(numeros)
+
+    arr.forEach(function(el, i, arr){
+
+      console.log('el=', el, ' | i=', i, ' |i -', arr.toString() )
+
+    })
+
+    var posicaoStr1 = arr.indexOf('10', 5);
+
+    console.log('posicaoStr1', posicaoStr1)
+
+    var posicaoStr2 = arr.lastIndexOf('10', 7);
+
+    console.log('posicaoStr2', posicaoStr2)
+
+
+
+
+  </script>
+
+</body>
+
+</html>

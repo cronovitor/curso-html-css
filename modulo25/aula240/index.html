@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 240</title>
+</head>
+
+<body>
+
+  <h1>aula 240</h1>
+
+
+
+  <input type="text" id="txtNome" value="digite um nome" readonly><button onclick="escreve()">só clica</button>
+
+</body>
+
+<script>
+
+
+  var $txt = document.querySelector('#txtNome');
+
+  var nome = 'vitor';
+
+  var sobrenome = 'Alves'
+
+  document.querySelector('#txtNome').value = nome + sobrenome;
+
+  document.querySelector('#txtNome').disabled = true;
+
+</script>
+
+</html>

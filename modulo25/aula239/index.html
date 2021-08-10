@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 239</title>
+</head>
+
+<body>
+
+  <h1>aula 239</h1>
+
+  <div id="output"></div>
+
+  <input type="text" id="txtNome" value="digite um nome"><button onclick="escreve()">só clica</button>
+
+</body>
+
+<script>
+
+
+  txtNome2 = document.querySelector("#txtNome");
+
+
+  function escreve() {
+
+    var nome = txtNome2.value;
+
+    document.querySelector("#output").innerHTML = "bem vindo <b>" + nome + "</b>";
+
+  }
+
+
+
+</script>
+
+</html>

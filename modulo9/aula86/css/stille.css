@@ -1,0 +1,27 @@
+div{
+
+  border: 3px solid red;
+  padding: 25px;
+  position: relative;/*para quer eu consiga colocar meu quadrado dentro criado no after dentro da minha div usando o position absolute pq para usar o position absotule ele tem quer ser relatico a algo e por padrão ele e relativo ao body*/
+
+}
+
+div:before{ /*aqui eu usar a subclasse before para adicionar um texto antes do conteudo da minha div via css obs não deve ser usado para adicionar conteudo apenas para questões visuais*/
+
+  content: "texto before";
+  background-color: #ccc;
+
+}
+
+div:after{ /*e a mesma coisa do before mais adiciona conteudo depois do conteudo da minha div*/
+
+  content: "";/*mesmo que não tenha conteudo no meu content ele deve existir quando eu usar as sub-classes before e after*/
+  background-color: indigo;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  position: absolute;/*com o position absolute eu vou controlar aonde eu vou colocar meu quadrado criado com meu backgroud-color obs: para isso eu devo solocar na*/
+  bottom: 0;/*lembrando que sempre usamos valores invertidos então para ir para a direita e para baixo eu uso 0 e 0 em right e bottom*/
+  right: 0;
+
+}

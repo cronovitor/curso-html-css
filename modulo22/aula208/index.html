@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exercicio</title>
+</head>
+<body>
+
+  <h1>exercicio</h1>
+  
+</body>
+
+<script>
+
+  var dias = new Array('domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sabado');
+
+  var hoje = new Date();
+
+  var diaSemana = hoje.getDay();
+
+  
+
+  function semana(){
+
+    var di = null;
+
+    switch(diaSemana){
+
+      case diaSemana = 0: 
+
+      di = dias[0];
+
+      break;
+
+      case diaSemana = 1: 
+
+      di = dias[1];
+
+      break;
+
+      case diaSemana = 2: 
+
+      di = dias[2];
+
+      break;
+
+      case diaSemana = 3: 
+
+      di = dias[3]
+
+      break;
+
+      case diaSemana = 4: 
+
+      di = dias[4];
+
+      break;
+
+      case diaSemana = 5:
+
+      di = dias[5];
+
+      break;
+
+      case diaSemana = 6:
+
+      di = dias[6]
+
+    }
+
+    alert('Bem vindo hoje é ' + di)
+
+  }
+
+  semana()
+
+
+
+
+
+</script>
+
+</html>

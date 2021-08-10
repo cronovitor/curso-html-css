@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 207</title>
+</head>
+<body>
+
+  <h1>aula 207</h1>
+
+  <div id="output"></div>
+  
+</body>
+
+<script>
+
+  var produtos = new Array('caneta', 'lapis', 'borracha', 'caderno', 'livro', 'tesoura');
+
+  produtos.push('cartolina', 'compasso');
+
+  var output = document.querySelector('#output');
+
+  var msg = '';
+
+  for(i = 0; i < produtos.length; i++){
+
+    msg += 'produtos ' + (i + 1) + ': ' + produtos[i] + '<br>';
+
+  }
+
+  output.innerHTML = msg;
+
+</script>
+</html>

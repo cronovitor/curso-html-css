@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>listas aula 42</title>
+
+  <style>/*uma pequena brincadeira demonstrando oque posso fazer juntando css e as listas*/
+
+    li ol{ /*usando esse caminho eu seleciono toda 'ol/ul' que esta dentro de uma 'li'*/
+
+      display: none;
+
+    }
+
+    li:hover{/*aqui eu adiciono uma cor de fundo toda vez que eu passar o mouse por cima de uma 'li'*/
+
+      background: #ccc;
+
+    }
+
+    li:hover ol{/*aqui toda vez que eu passar o mouse em uma li que contem uma 'ol/ul' eu irei acionar uma propriedade*/
+
+      display: block;/*e o efeito que eu escolhi a ser ativado toda vez que eu passar o mouse no li e anular o efeito display:none ou seja ele ira aparecer*/
+
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <ul> <!--e dessa forma eu consigo criar uma lista dentro de outra lista muito util para organizar links em sessões por exemplo-->
+
+    <li>item 1</li>
+    <li>item 2
+
+      <ol>
+
+        <li>item 2.1</li>
+        <li>item 2.2</li>
+
+      </ol>
+
+    </li>
+    <li>item 3</li>
+
+  </ul>
+
+  <hr>
+
+  <dl> <!--e dessa forma eu crio ma lista determinante ums lista determinante e um item com uma descrição em baixo (eu acho que e isso mesmo) o item pode ter uma descriçao ou não como vai ser exemplificado abaixo-->
+    <!--ou eu tambem posso criar um item com duas descrições posso variar o modo do uso da lista determinante-->
+
+    <dt>HTML</dt>
+    <dd>Liguagem de marcação de hipertexto</dd>
+
+    <dt>CSS</dt>
+    <dd>Linguagem para criação de folhas de estilo</dd>
+
+  </dl>
+
+  <hr>
+
+  <dl>
+
+    <dt>www</dt>
+    <dt>internet</dt>
+    <dd>rede mundial de computadores</dd>
+
+    <dt>javascript</dt>
+    <dd>linguagem script para internet</dd>
+    <dd>script para rodar no browser</dd>
+
+
+  </dl>
+  
+</body>
+</html>

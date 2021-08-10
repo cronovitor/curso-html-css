@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exercicio</title>
+</head>
+
+<body>
+
+  <h1>exercicio</h1>
+
+  <button onclick="mostrarAreaOutput()">Mostrar area na pagina</button>
+
+  <div id="output"></div>
+
+</body>
+
+<script>
+
+  mostrarAreaAlert();
+
+  function mostrarAreaAlert() {
+
+    var largura = prompt('Digite a largura');
+
+    largura = parseFloat(largura);
+
+    var altura = prompt('Digite a altura');
+
+    altura = parseFloat(altura);
+
+    try {
+
+      var area = calcular(largura, altura);
+
+    } catch (e) {
+
+      area = e
+
+    }
+
+
+
+    alert('A area total é: ' + area);
+
+  }
+
+  function mostrarAreaOutput() {
+
+    var largura = prompt('Digite a largura');
+
+    largura = parseFloat(largura);
+
+    var altura = prompt('Digite a altura');
+
+    altura = parseFloat(altura);
+
+    try {
+
+      var area = calcular(largura, altura);
+
+    } catch (e) {
+
+      area = e
+
+    }
+
+
+    var output = area;
+
+    escrever(area);
+
+  }
+
+  function calcular(l, a) {
+
+    if (l === undefined || a === undefined) {
+
+      throw new Error('Digite um numero valido');
+
+    }
+
+    if (isNaN(l) || isNaN(a)) {
+
+      throw new Error('Digite um numero valido')
+
+    }
+
+    var numeroCalculado = l * a;
+
+    return numeroCalculado;
+
+  }
+
+  function escrever(mensagem) {
+
+    var output = document.querySelector('#output');
+
+    output.innerHTML = mensagem;
+
+  }
+
+
+</script>
+
+</html>

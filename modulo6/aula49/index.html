@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 48 formularios css</title>
+
+</head>
+
+<body>
+
+  <h1>exemplo de formularios</h1>
+
+
+  <form action="#" method="POST" class="formLogin">
+
+    <fieldset>
+
+      <legend>Dados pessoais</legend>
+
+      <label>Email</label>
+      <input type="email" required>
+
+      <br>
+
+      <label>numero de filhos</label>
+      <input type="number" min="0" max="10000">
+
+      <br>
+
+      <label>Nascimento</label>
+      <input type="date" min="2018-01-30" max="2138-01-30">
+
+      <br>
+
+      <p>Sexo:</p>
+      <label>
+        Masculino
+        <input type="radio" name="sexo">
+      </label>
+
+      <label>
+        Feminino
+        <input type="radio" name="sexo">
+
+      </label>
+      <br>
+
+      <br>
+
+      <label>Estado</label>
+      <br>
+      <select>
+
+        <option value="0">Selecione</option>
+        <option value="SP">São Paulo</option>
+        <option value="RJ">Rio de Janeiro</option>
+        <option value="MG">Minas Gerais</option>
+
+      </select>
+
+      <br>
+
+    </fieldset>
+
+    <fieldset>
+
+      <legend>Área de interesse</legend>
+
+      <label>
+
+        <input type="checkbox" name="html" value="html">HTML
+        
+        <input type="checkbox" name="CSS" value="html">CSS
+        
+        <input type="checkbox" name="hJS" value="html">JAVASCRIPT
+
+      </label>
+
+    </fieldset>
+
+    <fieldset>
+
+      <legend>Mensagem</legend>
+
+      <textarea style="resize: none;" name="" id="" cols="30" rows="10" maxlength="20" minlength="5" ></textarea>
+      <br>
+      <textarea style="resize: none;" name="" id="" cols="30" rows="10" readonly>posso colocar qualquer texto aqui para aparecer na pagina</textarea>
+      <br>
+      <label><input type="checkbox" checked>Li e aceito os termos!</label>
+
+      
+
+    </fieldset>
+
+    <input type="submit" value="mandar">
+
+    <input type="button" value="button">
+
+    <input type="reset" value="reset">
+
+    <input type="color">
+
+    <input type="search">
+
+    <select size="5" multiple>
+
+      <option>opção1</option>
+      <option>opção2</option>
+      <option>opção3</option>
+      <option>opção4</option>
+      <option>opção5</option>
+
+    </select>
+
+  </form>
+
+</body>
+
+</html>

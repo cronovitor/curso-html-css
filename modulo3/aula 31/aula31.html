@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 31</title>
+  <style>/*aqui no caso vamos mostrar as formas de manter as proporções pre definidas pros elementos no boxmodel*/
+    div{ /*aqui no caso seria as proporções originais 150 de largunra por 100 de altura mais uma margem de 10px de cada 1 dos 4 lados*/
+      background-color: orange;
+      width: 150px;
+      height: 100px;
+      margin: 10px;
+    }
+
+    #div1{/*caso eu coloque 25px de padding em cada um das divs no vaco vai ultrapassar a largura e a altura que ficaria 200 de largura por 150 de altura somando o padding de 25px para todos os 4 lados*/
+      padding: 55px;
+    }
+    #div2{
+      padding: 55px;
+      box-sizing: border-box;/*usando o box-sizing: border-box eu consigo manter as proporções originais estabelecidas no meu seletor div por exemplo que esta com 150px de largura width: 150px e 100px de altura heigth: 150px e assim estabelecendo eles como a borda a ser respeitada*/
+    
+    }
+  </style>
+</head>
+<body>
+  <h1>Titulo teste</h1>
+  <div class="div1">test1</div>
+  <div class="div2">test2</div>
+</body>
+</html>

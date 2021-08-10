@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 263</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>aula 264</h1>
+
+    <form action="#"  method="POST">
+
+      <label for="txtUser">Usuario</label>
+      
+      <input type="text" id="txtUser" name="user">
+      
+      <br>
+
+      <label for="txtPass">Senha</label>
+
+      <input type="password" id="txtPass" name="pass">
+
+      <br>
+
+      <button type="submit" id="btn">Logar</button>
+
+    </form>
+
+  </div>
+
+</body>
+
+<script>
+
+  (function(){
+
+
+    'user strict'
+
+    var $form = document.querySelector('form')
+
+    var $txtUser = document.getElementById('txtUser');
+
+    var $txtPass = document.getElementById('txtPass');
+
+    var $btn = document.getElementById('btn');
+
+    $form.addEventListener('submit', function(e){
+
+
+      if(!$txtUser.value|| !$txtPass.value){
+
+        alert('Campos vazios');
+
+        e.preventDefault();
+
+      }
+
+    })
+
+  })()
+
+</script>
+
+</html>

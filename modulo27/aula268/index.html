@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 268</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>aula 268</h1>
+
+    <textarea id="msg" cols="50" rows="10" maxlength="100"></textarea>
+
+
+    <p id="restaParagrafo" style="display: none;">Restam <span id="resta"></span> caracteres</p>
+
+
+  </div>
+
+</body>
+
+<script>
+
+  (function(){
+
+
+    'user strict'
+
+    var $txtMsg = document.getElementById('msg');
+
+    var $restaParagrafo = document.getElementById('restaParagrafo')
+
+    var $resta = document.getElementById('resta');
+
+    var maxima = $txtMsg.maxLength;
+
+    $restaParagrafo.style.display = 'block'
+
+    $txtMsg.addEventListener('input', checkLength); 
+
+    $resta.textContent = maxima;
+
+    function checkLength(e){
+
+      var numeroLetrasDigitadas = this.value.length;
+
+      $resta.textContent = maxima - numeroLetrasDigitadas;
+
+    }
+
+  })()
+
+</script>
+
+</html>

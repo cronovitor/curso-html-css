@@ -1,0 +1,500 @@
+body{
+
+  font-family: 'open-sans', sans-serif;
+  color: #666;
+  line-height: 1.7;
+
+}
+
+a { /*aqui eu estou editando todos os meus links colocando um efeito de transição e tirando o subliado e adicionando uma decoração nova em baixo do link*/
+
+  transition: color .5s linear, border-bottom-color .2 linear; /*aqui estou adicionando a transição/effeito de mudança de cor do meu link primeiro coloco o elemento a ser formatado no caso a cor a quantidade de segundos e a forma do efeito*/
+  text-decoration: none; /*aqui estou tirando o sublinhado do meu link*/
+  border-bottom: 1px dotted; /*aqui estou colocando uma subliado pontilhado embaixo do meu link*/ 
+  color: #49bf9d;
+
+}
+
+a:hover{
+
+  border-bottom-color: transparent;
+
+} 
+
+p{
+
+  margin: 0 0 2em;
+
+}
+
+img{
+
+  max-width: 100%;/*esse max-width e aplicado para que a imagem fique sempre do tamanho original dela e não fique variando de tamanho*/
+
+}
+
+h1, h2, h3, h4, h5, h6{
+
+  color: #787878;
+  font-weight: normal;
+  margin: 1em 0 ; /*aqui estou usando a nova unidade de medida em para mariar o tamanho da margin, o em e relativo ao tamnho do font-size*/
+
+}
+
+sub, sup{
+
+  font-size: 12px;
+
+}
+
+blockquote{
+
+  border-left: 5px solid #efefef;
+  margin: 2em 0;
+  padding: .5em 0 .5em 1.5em;
+
+}
+
+blockquote p{
+
+  margin-bottom: 0;
+
+}
+
+code{
+
+  background-color: #f7f7f7;
+  border-radius:  .35em;
+  border: 2px solid #efefef;
+  font-size: .9em;
+  padding: 0.25em 0.65em;
+  font-family: 'Courier New', Courier, monospace; /*geralmente para codigo e usada essa fonte 'courier new'/'monospace'*/
+  color: #929292;
+
+}
+
+pre code{
+
+  display: block;
+
+}
+
+ul, ol{
+
+  margin: 0;
+  padding: 0;
+  padding-left: 1.1em;
+
+}
+
+li{
+
+  padding-left: 5em;
+
+}
+
+.hidden{/*essa e uma forma de garantir que eu vou esconder meu texto mais o leitor de tela mesmo assim vai conseguir ler o conteudo diferente do display:block*/
+
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  display: block;
+
+}
+
+.ul-alternate{
+
+list-style-type: none;
+padding-left: 0;
+
+}
+
+.ul-alternate li{
+
+  border-bottom: 2px solid rgb(226, 226, 226);
+  padding-left: 0;
+
+}
+
+.ul-alternate li:last-child{ /*aqui eu uso a last-child para eu formatar apenas a ultima li do meu conjunto*/
+
+  border: 0;
+
+}
+
+.ul-icons{
+
+  list-style-type: none;
+  padding-left: 0;
+
+}
+
+.ul-icons li{
+
+  display: inline-block;
+  padding-left: 0;
+  color: #49bf9d;
+  font-size: 1em;
+
+}
+
+input, label, textarea{ /*aqui estou formatando meu formulario para o mesmo se encaixar na grid que foi formaatada na parte inferior do nosso css*/
+
+  display: inline-block; /*aqui eu estou tranqsformando meu elementos de linha em de linha e de bloco ao mesmo tempo*/
+  width: 100%;
+  box-sizing: border-box; /*e aqui estou corrigindo e configurando o tamanho maximo da formatação da minha pagina para encaixar os elementos da grid*/
+
+}
+
+input[type="radio"], input[type="checkbox"]{/*aqui eu estou selecionando os atributos do meu input e o para fazer isso eu preciso colocar o type dentro de um '[]' como no exemplo*/
+
+  width: auto;
+
+}
+
+input, textarea, select{ /*aqui estou fazendo as configurações dos meus inputs e do meu text area*/
+
+
+  background: #ccc;
+  padding: 15px; /*aqui e o tamanho dos campos para digitar as informações*/
+  border-radius: 5px; /*aqui aredondando as bordas dos campos*/
+  border: 3px solid transparent;/*aqui em vez de tirar a borda estou colocando uma borda transparente para fazer o efeito do focus de quando eu clicar no campo aparecer uma borda verde do padrão da pagina*/
+  margin-bottom: 15px;/*e aqui dando um espaço pra baixo separando meus elementos*/
+
+}
+
+input:focus, textarea:focus{ /*aqui estou fazendo um efeito que quando eu clico no campo para digitar o mesmo vai fazer uma borda verde do padrão da pagina*/
+
+  border: 3px solid #49bf9d;
+  outline: none; /*aqui eu estou turando a bordinha que vem padrão do browser*/
+
+}
+
+textarea{
+
+  height: 10em;
+
+}
+
+.button-default{
+
+  background-color: #49bf9d;
+  border: 3px solid #49bf9d;
+  color: white;
+  padding: .75em 1.5em;
+  border-radius: 5px; /*aqui eu estou aredondando as bordas do meu botão*/
+  font-size: .8em;
+  display: inline-block;/*aqui eu estou usando o inline-block para consertar a parte do meu botão que estava sendo cortada pois como o botão e um elemento de linha o não podemos aplicar margin e outras formatações para elementos de bloco*/
+  width: auto;
+  transition: all .5s; /*aqui eu estou colocando uma transição pra fazer um efeito nos meus botões no stroke nas bordas e no deafult ele vai ficar mais claro*/
+  cursor: pointer; /*com essa tag eu mudo meu cursor para uma mãozinha toda vez que ele passar em cima do potão*/
+
+}
+
+.button-default:hover{
+
+  background-color: #64e4bf;
+  border-color: transparent;
+
+}
+
+.button-default-stroke{
+
+  background-color: white;
+  border-color: #efefef;
+  color: inherit;/*aqui eu estou herdando a cor do elemento ancestral ou seja dos elementos do boddy*/
+
+}
+
+.button-default-stroke:hover{
+
+  color: #49bf9d;
+  border-color: #49bf9d;
+  background-color: white;
+
+}
+
+.button-default-small{
+
+  font-size: .6em;
+
+}
+
+.button-default-full{
+
+  text-align: center;
+  display: block;
+
+
+}
+
+.button-default-big{
+
+  font-size: 1em;
+
+}
+
+.imagem-link{
+
+  border: 0;
+
+}
+
+.table{
+
+  width: 100%;
+  margin: 0 0 2em 0;
+  border-collapse: collapse;
+  text-align: left;
+
+}
+
+.table td{
+
+  padding: .75em;
+
+}
+
+.table th{
+
+  background: #ccc;
+  padding: .75em;
+
+}
+
+.table tbody tr:nth-child(even) td{ /*aqui estou selecionando os elementos pares da minha tabela e vou dar uma cor de fundo um pouco mais escura para dar um contraste*/
+
+  background: #ddd;
+
+}
+
+.table tbody tr td{ /*e aqui eu estou colocando uma linha bem fina separadando cada item da minha tabela*/
+
+  border-bottom: 1px solid #ccc;
+
+}
+
+.table tbody tr:first-child td{ /*aqui eu estou selecionando o primeiro elemento que esta no td que esta no tbody*/
+
+  border-top: 2px solid #666;/*aqui eu estou colocando uma linha mais forte no topo da minha tabela*/
+
+}
+
+.table tbody tr:last-child td{ /*aqui estou colocando uma linha mais forte no ultimo elemento do meu td que esta no meu tbody*/
+
+  border-bottom: 2px solid #666;
+
+}
+
+.table-alternate tbody td, .table-alternate tbody tr:first-child td, .table-alternate tbody tr:last-child td{
+
+  border: 1px solid #ddd;
+
+}
+
+.main-header{ /*aqui vamos ja posicionar nosso header e deixalo fixo sempre na parte esquerda na nossa pagina como no projeto inicial*/
+
+  position: fixed; /*nesses 3 primeiros elemsntos vou configurar a posição e a fixação do meu header na lateral*/
+  top: 0;
+  left: 0;
+  height: 100%;/*aqui estou deixando ele ocupar todo espaço na vertical*/
+  width: 35%; /*aqui ele vai opupar apenas 35% da minha horizontal para para ele se encaixar nos 65% restante do meu main-content*/
+  padding: 124px 54px 72px;/*mesmo padding usado no meu main-contet para espaçar meus elementos das bordas*/
+  box-sizing: border-box; /*usadno o border-box para manter a proporção e o meu padding não mexer na proporção da minha pagina*/
+  background-image: url(../imgs/overlay.png), url(../imgs/bg.jpg);/*aqui estou trabalhando com duas imagems se sobrepondo uma criando uma leve textura sobre a outra*/
+  background-position: left top; /*aqui eu estou posicionando minha imagem*/
+  background-size: auto, cover; /*aqui estou configurando o tamanho da minha imagem para ela cobrir toda o espaço automaticamente*/
+  text-align: right; /*aqui estou alinhando o texto na parte direita*/
+
+}
+
+.main-header-title{ /*aqui irei formatar minha tag h1 do meu header*/
+
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: normal;
+  color: rgba(255, 255, 255, .5); /*aqui eu uso a tag rgba para escolher a cor e dar uma tranparencia a cor lembrando 0 e sem transparencia 1 e total transparente*/
+  
+
+}
+
+.main-header-title strong{ 
+
+  color: white;
+  font-weight: normal;
+
+}
+
+.main-header-link{
+
+  color: inherit;/*aqui estou usando o inherit para herdar a cor do nosso main-header-title ja que o nosso main-header-link e decendente/dependente*/ 
+
+}
+
+.main-header-link:hover{/*aqui eu estou aplicando uma cor toda vez que o usuario passar o mouse em cima do meu link*/
+
+  color: #49bf9d;
+
+}
+
+.main-content{
+
+  width: 65%; /*aqui estamos configrando a largura do nosso content para se encaixar com nosso header lateral*/
+  margin-left: 35%; /*aqui estou distanciando os 35% do nosso header para os dois se encaixarem lado a lado*/
+  padding: 124px 54px 72px;/*aqui estou criando um espaço interno para descolar meu conteudo das bordas*/
+  box-sizing: border-box; /*eu uso o border-box para manter as proporções da minha pagina mesmousando o padding ele não ira somar no espaço final do meu site*/
+
+}
+
+.main-header-link img{
+
+  border-radius: 50%; /*aqui estou aplicando o border radius na minha imagem do meu header para ele ficar totalmente redondo obs: para focar totalmente redondo eu aplico 50%*/
+  overflow: hidden;
+
+
+}
+
+.rencent-works-card img{
+
+  border-radius: 10px; /*aqui estou aredondando as bordas dos meus cards do meu recent works*/
+  overflow: hidden;
+
+}
+
+.gallery-img img{
+
+  width: 100%; 
+  
+
+}
+
+.gallery-thumb img, .gallery-img img{
+
+  margin-bottom: 2%;
+  display: inline-block;/*aqui estou usando o display inline-block para eu conseguir aplicar a margin boton nas minhas imagems*/
+  border-radius: 5px;
+  
+}
+
+.img-left {
+
+  float: left;
+  margin: 0 5px 5px 0;
+
+}
+
+.img-right{
+
+  float: right;
+  margin: 0 0 5px 5px;
+  
+}
+
+.text-right{
+
+  text-align: right;
+
+}
+
+.main-footer{/*aqui eu vou copiar alguns parametros do header pois nosso footer vai ficar contido na parte inferior do nosso header*/
+
+  position: fixed;
+  bottom: 0;
+  width: 35%;
+  left: 0;
+  padding: 0 54px 72px 0;
+  box-sizing: border-box;
+  text-align: right;
+
+}
+
+/*desta parte pra frente ate chegar no grid eu copiei do css dele pois ele não explicou!!!*/
+
+.main-footer a{
+  color: rgba(255, 255, 255, 0.4);    
+  text-decoration: none;
+}
+.main-footer a:hover{
+  color: #49bf9d;   
+}
+.main-footer .ul-icons a{
+font-size: .75em;   
+  border-bottom: none;
+}
+.copyright{
+  list-style: none;
+}
+.copyright li{
+  display: inline-block;
+  border-left: solid 1px rgba(255, 255, 255, 0.25);
+  padding: 0 0.75em;
+  line-height: 1;
+  font-size: .8em;
+}
+.copyright li:first-child {
+  border-left: 0;
+}
+.copyright li:last-child {
+  padding-right: 0;
+}
+/*ate aqui copiado do css do cara*/
+
+/*Grid*/
+
+.row{
+
+  overflow: auto;/*e usando o overflow para fazer o float se encaixar perfeitamente um do lado do outro*/
+
+}
+
+.col-2{
+
+  width: 49%; /*aqui e para cada coluna ocupar 49% da pagina*/
+  float: left; /*e essa e para um ficar do lado do outro*/
+
+}
+
+.col-2:first-child{/*como na minha formatação co col-2 esta pra cada elemento pegar 49% da pagina vou distribuir esses dois 2% restante em duas margins uma na direita e uma na esquerda para dar um espaço para meus elementos*/
+
+  margin-right: 1%; 
+
+}
+
+.col-2:last-child{
+
+  margin-left: 1%;
+
+}
+
+.col-2-3{
+
+  width: 65%;
+  float: left;
+  
+}
+
+.col-1-3{
+
+  width: 32%;
+  float: left;
+
+
+}
+
+.col-1-3:nth-child(3n -2){ /*aqui eu estou usando todos os multiplos de 3 -2 ou seja estou selecionando o 1 o 4 e o 7 e estou adicionando uma margen right de 2%*/
+
+  margin-right: 2%;
+
+}
+
+.col-1-3:nth-child(3n){/*e aqui estou selecionando todos os multiplos de 3 e estou adicionando uma margen de 2% pra direira assim eu consigo resolver a quebra de grid calsada no meu formulario*/
+
+margin-left: 2%;
+
+}
+
+.col-2-3 + .col-1-3, .col-1-3 + .col-2-3{ /*o sinal '+' no identificador e para selecionar a primera tag apos o '+' */
+
+  margin-left: 2%;
+
+}

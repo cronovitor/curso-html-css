@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 194 exercicio</title>
+</head>
+
+<body>
+
+  <h1>exercicio</h1>
+
+  <button onclick="som()"> + </button>
+
+  <button onclick="sub()"> - </button>
+
+  <button onclick="div()"> / </button>
+
+  <button onclick="mul()"> x </button>
+
+
+  <div id="output"></div>
+
+  <script>
+
+    var n1 = prompt("Digite um numero");
+
+    n1 = parseFloat(n1);
+
+    var mensagem = '';
+
+    var output = document.querySelector('#output');
+
+    output.innerHTML = n1;
+
+
+
+    function som() {
+
+      var n2 = prompt("Digite um numero");
+
+      n2 = parseFloat(n2);
+
+      mensagem += n1 + ' + ' + n2 + ' = ' + (n1 + n2) + '<br>';
+
+      output.innerHTML = mensagem;
+
+    }
+
+    function sub() {
+
+      var n3 = prompt("Digite um numero");
+
+      n3 = parseFloat(n3);
+
+      mensagem += n1 + ' - ' + n3 + ' = ' + (n1 - n3) + '<br>';
+
+      output.innerHTML = mensagem;
+
+    }
+
+    function div() {
+
+      var n4 = prompt("Digite um numero");
+
+      n4 = parseFloat(n4);
+
+      mensagem += n1 + ' / ' + n4 + ' = ' + (n1 / n4) + '<br>';
+
+      output.innerHTML = mensagem;
+
+    }
+
+    function mul() {
+
+      var n5 = prompt("Digite um numero");
+
+      n5 = parseFloat(n5);
+
+      mensagem += n1 + ' X ' + n5 + ' = ' + (n1 * n5) + '<br>';
+
+      output.innerHTML = mensagem;
+
+    }
+
+  </script>
+
+</body>
+
+</html>

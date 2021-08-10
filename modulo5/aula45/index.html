@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Vitor Alves">
+  <title>Aula 45 table</title>
+  <link rel="stylesheet" href="css/stile.css">
+</head>
+<body>
+
+  <table> <!--e dessa forma vamos trabalhar as tabelas e sua estrtura basica-->
+
+    <caption>Tabela de preços de cursos</caption> <!--o titulo da tabela-->
+
+    <thead> <!--aqui vai ficar o cabeçario da nossa tabela contendo as informações que vai ter na nossa tabela-->
+
+      <tr> <!--aqui e o table row aonde tenho que crialo para eu conseguir colocar informações na minha tabela-->
+
+        <th>Área</th> <!--e como estamos no thead vamos usar o th que e a semantica certa para se escrever informações no thead-->
+        <th>Curso</th> 
+        <th>Investimento</th> 
+
+      </tr>
+
+    </thead>
+
+    <tfoot>
+
+      <tr>
+
+        <td colspan="3">Valores sujeitos a alteração sem aviso prévio</td>
+        <!--como essa parte da tabela so tem 1 linha na horizontal eu estou usando o coldspan para eu fazer essa linha ocupar o espaço das 3-->
+
+
+      </tr>
+
+    </tfoot>
+
+    <tbody> <!--e aqui eu vou colocar as informaçoes que eu enunciei no cabeçario da tabela ous eja as informações dos cursos-->
+
+      <tr> <!--aqui novamente um tr para eu colocar a td para conter a informação da minha tabela-->
+
+        <td rowspan="3">Design</td> <!--como estou no tbody aqui eu posso usar td o table data para eu colocar as informações que vão ter na minha tabela-->
+        <!--como os outros 2 cursos tambem são de design eu vou fazer o enunciado design servir para os 3 cursos usando o rowspan para ele ocupar 3 linhas na vertical-->
+        <td>InDesing</td>
+        <td>R$ 1.000,00</td>
+        
+      </tr>
+
+      <tr>
+
+        
+        <td>Photoshop</td>
+        <td>R$ 1.000,00</td>
+        
+      </tr>
+
+      <tr>
+
+        
+        <td>Illustrator</td>
+        <td>R$ 1.000,00</td>
+        
+      </tr>
+
+      <tr>
+
+        <td rowspan="4">Develop</td><!--e da mesma forma do design temos 4 cursos de develop então vamos fazer o develop do primeiro curso servir para os 4 usando o rowspan para o develop ocupar 4 linhas na vertical-->
+        <td>HTML</td>
+        <td>R$ 1.000,00</td>
+        
+      </tr>
+
+      <tr>
+
+        
+        <td>CSS</td>
+        <td>R$ 1.000,00</td>
+        
+      </tr>
+
+      <tr>
+
+        
+        <td>Javascript</td>
+        <td>R$ 1.000,00</td>
+        
+      </tr>
+
+      <tr>
+
+        
+        <td>PHP</td>
+        <td>R$ 1.000,00</td>
+        
+      </tr>
+
+    </tbody>
+
+  </table>
+  
+</body>
+</html>

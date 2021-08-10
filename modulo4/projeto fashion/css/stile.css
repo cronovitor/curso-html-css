@@ -1,0 +1,180 @@
+body{ /*aqui no css sempre vou começao com essas configurações no body*/
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#principal{/*aqui no caso vou usar o id da div principal para determinar um tamanho e centralizar o conteudo*/
+  width: 1024px; /*aqui como eu sei que a div tem 1024px eu ja coloquei o tamanho total da div*/
+  margin: 25px auto; /*aqui eu estou usando o margin para empurar o site todo e desgrudar os elementos das bordas*/
+}
+
+.head-top{ /*aqui vou configurar o topo do meu site aonde fica o logo tipo*/
+  height: 50px; /*aqui vou controlar a altura que vai ter meu header*/
+  background-color: #162028;
+  position: relative; /*aqui colocamos o position para o elemento head-nav possa se relacionar com head-top ou seja o head-top esta sendo o elemento pai*/
+}
+
+.head-nav{
+
+  position: absolute; /*estamos usando o position aqui para posicionar o nosso menu principal da pagina*/
+  top: 0;
+  right: 0;
+  height: 100%;/*como o nosso head-top tem uma altura de 50px ja definida posso configurar o nosso nav para ter 100% do tamanho*/
+
+}
+
+.head-nav ul{/*aqui estou zerando a margin e o paddin da ul que ja vem com margin e paddin padrões*/
+
+  margin: 0;
+  padding: 0;
+
+}
+
+.head-nav li{ /*aqui vamos tirar a decoração ou seja a bolinha da frente dos nosso itens da 'li' e vamos fazer os elementos da li ficar em linha*/
+
+  list-style: none;
+  display: inline-block;
+  margin: 0 15px 0 0; /*aqui estou criando uma margin (ou seja um espaço) do lado direito de cada item da li deixando os elementos mais espaçados um do outro*/
+  padding: 13px;/*aqui estou usando o paddin para distanciar mais os elementos das bordas em todas as direções*/
+
+}
+
+.head-nav a{ /*aqui no caso eu estou mexendo nas propriedades dos meus links do meu menu de navegação*/
+  color: #425564;
+  text-decoration: none; /*aqui eu tirei a decoração ou seja quando eu clicar ou passar o mouse por sima não vai fazer aquele efeito q sempre faz por padrão*/
+  text-transform: uppercase;/*com esse comando eu deixo minha escrita toda em maiusculo*/
+  font-size: 12px;/*e aqui eu vou mexer no tamanho da fonte da escrita dos meus links*/
+  letter-spacing: 5px; /*e aqui eu configuro o espaço que vai ter entre as letras*/
+  transition: color 0.3s linear; /*e aqui eu controlo a transisão do efeito do hover ou seja o efeito do meu menu principal que deixa a escrita branca assim eu adiciono um efeito e faz uma transição da cor original para o branco*/
+
+}
+
+.head-nav a:hover{ /*e aqui eu vou editar o efeito de quando eu passo ou clico no meu menu principal*/
+
+  color: white;
+
+
+}
+
+.logotipo{
+
+  margin: 5px 0 0 145px; /*usando o margin eu empurei o logotipo um pouco pra baixo com os 5px os valores da direita e baixo ficaram inalterados e o da esquerda foi colocado 145px para criar um espaço na esquerda empurando o logo tipo para a direita*/
+
+}
+
+/*ate aqui vai a parte do header fizemos todas as configurações e aplicamos em todas as propriedades que tinhão que ser formatadas com css*/
+
+.portifolio{/*aqui vou começar a formatar meus itens principais da pagina*/
+  padding: 50px 100px; /*aqui no meu portifolio vou usar o padding para criar 50px de espaço em cima e em baixo e 100px para criar dos lados direito e esquerdo para criar uma centralização do conteudo na tela */
+  text-align: center; /*aqui eu centralizei o texto e seus paragrafos*/
+
+}
+
+.portifolio h1{ /*aqui vou formatar meu h1 do meu portifolio*/
+
+  font-size: 36px;
+  color: #252525;
+
+}
+
+.portifolio p{/*aqui eu vou formatar meu p de portifolio*/
+
+  font-size: 16px;
+  line-height: 2; /*uso esse comando parar dar um espaço duplo entre as letras e os paragrafos do meu texto (posso usar em qualquer parte que vai escritas)*/
+  color: #555;
+  
+}
+
+.gallery{/*aqui eu formato o espaço das 3 fotos que esta na class gallery no conteudo principal da minha pagina*/
+
+  color: #555;
+  padding: 0 100px 50px 100px; /*com esse padding eu estou centralizando as fotos e deixando elas alinhadas com meu texto acima*/
+  overflow: auto;/*adicionada nossa gambiara no elemebto pai para voltar nosso elementos para o lugar ignorando o a propriedade flutuante do float*/
+
+}
+
+.gallery-card{/*aqui vou formatar e ja colocar no lugar as fotos em si dimencionar tamanho e posicionar aonde cada uma vai ficar e qual tamanhao vai ocupar na pagina*/
+
+  width: 32% ; /*eu dimencionando cada uma das 3 imagens com 32% do tamanho da pagina então vou ter o tamanho total de 96% do tamanho ficando apenas 4% para dimencionar*/
+  float: left;/*dessa forma as imagens vão ficar uma do lado da outra mais vão ficar flutuando então vamos ter q adicionar nossa 'gambiara' do overflow: auto no elemento pai ou seja no .gallery*/
+  text-align: center;/*aqui nos alinhamos nossos textos que ficam embaixo das nossos fotos dos cards*/
+
+}
+
+.gallery-title{/*aqui estou formatando os titulos que estão aparecendo nos meus cards na minha pagina*/
+
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 16px;
+  font-weight: bold;/*com esse comando a escrita aparenta estar mais forte com mais contorno mais visibilidade/destaque na escrita*/
+
+}
+
+.about{/*aqui eu estou editando o segundo conteudo da minha pagina o conteudo de baixo do conteudo principal*/
+
+  background-color: #003d52;
+  padding: 100px;
+  color: white;
+  background-image: url(../imgs/bg_detalhe.png);
+  background-repeat: no-repeat; /*dessa forma a imagem vai parar de repetir como padrão*/
+  background-position: right bottom;/*e dessa forma eu jogo ele pra direita e pra baixo e ela se encaixa na minha div*/
+
+}
+
+.about h2{
+
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: normal; /*e dessa forma eu tiro o negrito/italico da escrita do h2*/
+
+}
+
+.about p{
+
+  line-height: 1.5;
+  width: 70%;
+
+}
+
+#contact{
+
+  margin: 50px 0; /*aqui eu estou criando um espaço em cima e em baixo na minha div contact*/
+
+}
+
+#contact address{
+
+  color: #143f52 ;
+  text-transform: uppercase;
+  font-size: 26px;
+  font-style: normal;
+  text-align: center;
+  font-weight: bold;
+
+}
+
+.maps{
+
+  width: 100%;
+  height: 450px;
+  margin-top: 15px;
+
+}
+
+.maps iframe{ /*aqui eu vou editar a largura do mapa*/
+
+  width: 100%;/*aqui eu coloquei 100% para pegar toda a largura disponivel da pagina*/
+
+}
+
+.rodape{
+
+  background-color: #0b171f;
+  padding: 25px;
+  font-size: 12px;
+  color: #6f8597 ;
+  text-align: center;/*aqui eu alinhei o copyright pro centro do rodape*/
+  letter-spacing: 4px; /*aqui eu dei um espaço entre as letras para a escrita ocupar mais espaço do rodape*/
+
+}

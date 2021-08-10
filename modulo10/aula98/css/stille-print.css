@@ -1,0 +1,16 @@
+body{
+
+  font-family: serif;
+  font-size: 16px;
+  color: blue;
+
+}
+
+a::after{
+
+  content: "( " attr(href) " )"; /*com o attr(href) eu adicionei o href ao meu content o conteudo do meu () pode ser qualquer atributo*/
+  /*quando eu deixo "()" pelo oq eu entendi ele adiciona meu texto que esta no no link ao antes do href que foi adicionado com o content mais isso no media print*/
+  display: inline-block;
+  margin: 0 10px;
+
+}

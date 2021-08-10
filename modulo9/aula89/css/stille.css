@@ -1,0 +1,17 @@
+div p:nth-of-type(3){
+
+  color: red;
+
+}
+
+.destaque{
+
+  background-color: #ccc;
+
+}
+
+.destaque:first-child{
+
+  color:blue;/*isso aqui so vai funcionar se a classe destaque estiver no primeiro filho caso ela esteja em demais filhos ela não ira funcionar*/
+
+}

@@ -1,0 +1,61 @@
+article:nth-child(1) a{ /*aqui eu estou selecionando o primeiro filho*/
+
+  color: red;
+
+}
+
+article:nth-child(3) > p{/*aqui eu estou selecionando todo paragrafo que e filho direto do meu article*/
+
+  color: green;
+
+}
+
+article:nth-child(5) h3 + p{/*aqui eu estou selecionando apenas o p que vem imediatamente apos o h3 do meu article */
+
+  color: rgb(179, 23, 145);
+
+}
+
+article:nth-child(7) h3 ~ p{ /*aqui vai selecionar todos os p parentes contidos no meu article apos o h3*/
+
+  color: rgb(206, 139, 62);
+
+}
+
+article:not(.destaque){ /*aqui eu estou usando o :not para que a cor seja aplicado em todos os articles menos o que esta com a classe destaque */
+
+  color: aqua;
+
+}
+
+.destaque{
+
+  background-color: greenyellow;
+
+}
+
+/*seletor de atributos*/
+
+a[href="#"]{/*aqui eu estou selecionando apenas os 'a' qual o valor seja href="#" para isso uso as '[]'*/
+
+  opacity: .2;
+
+}
+
+a[href^="http"]{ /*aqui eu estou selecionando todo 'a' que começa com o href="http" */
+
+  color: red;
+
+}
+
+a[title]{ /*aqui eu estou simplimesnte selecionando o a que contem um title*/
+
+  color: green;
+
+}
+
+a[href$=".pdf"]{/*aqui eu estou selecionando com o $ todo a com href que termine com .pdf ultilizando as []*/
+
+  text-decoration: none;
+
+}

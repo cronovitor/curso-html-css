@@ -1,0 +1,196 @@
+.flexbox{ 
+
+  height: 250px;
+  border: 1px solid red;
+  display: flex; /*propriedade display: flex e aplicada no elemento pai que automaticamente posiciona os elementos filhos da melhor forma possivel dentro do espaço determinado do elemento pai*/
+  margin-bottom: 15px;
+}
+
+.flexbox div{
+
+  background: orange;
+  width: 300px;
+  margin: 15px;
+
+}
+
+.flexbox:nth-child(1){
+
+  /*flex-direction: row;
+  flex-wrap: wrap;*/
+  flex-flow: row nowrap; /* nesse elemento eu determino a direção que vai meus elementos filhos por exemplo se vão aparecer em forma de colunas ou de lista e o segundo valor determina o comportamento dos meus elementos filhos por exemplo se caso não colber mais elementos dentro do elemento pai ele vai quebrar uma linha ou seja vai dividir o elementos pelametade do tamanho e criar uma segunda linha com outros elementos*/
+  
+
+}
+
+.flexbox:nth-child(5){
+
+  justify-content: space-between; /*o justify-content e usado pra posicionar os elementos na horizontal dentro do espaço do elemento pai por exemplo deixalos juntos no mais no inicio do espaço, deixalos mais proximos do centro obs: ir testando as variações pra ver os resultados*/
+
+}
+
+.flexbox:nth-child(5) div{
+
+  width: 50px;
+
+}
+
+.flexbox:nth-child(5){
+
+  align-items: stretch;/* a basicamente a mesma coisa do justify-content mais e usado pra posicionar na vertical*/
+  justify-content: center;
+}
+
+  .flexbox:nth-child(6){
+
+    width: 30px;
+
+  }
+
+  .flexbox:nth-child(7){
+
+    align-items: baseline;
+    justify-content: center;
+
+  }
+  
+  .flexbox:nth-child(8){
+
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+  }
+
+  .flexbox:nth-child(8) div{
+
+    width: 100px;
+
+  }
+
+  /*aqui vamos aprender as propriedades que podemos usar nos elementos filhos no flexbox*/
+
+  .flexbox:nth-child(9){
+
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .flexbox:nth-child(9) div{
+
+    background-color: indigo;
+    flex-basis: 100px;
+    height: 50px;
+
+  }
+
+  .flexbox:nth-child(10){
+
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .flexbox:nth-child(10) div{
+
+    background-color: indigo;
+    flex-basis: 100px;/*neste contesto que estamos desenvolvendo flex basis e a mesma coisa que largura do elemento*/
+    height: 50px;
+
+  }
+
+  .flexbox:nth-child(10) div:nth-child(2){
+
+    flex-grow: 2;/* flex-grow ele pega o espaço que esta sobrando no content ou seja no elemento pai e distribui no elemento selecionado*/
+
+  }
+
+  
+  .flexbox:nth-child(10) div:nth-child(4){
+
+    flex-grow: 1;
+
+  }
+
+  
+  .flexbox:nth-child(11) div{
+
+    background-color: indigo;
+    flex-basis: 100px;
+    height: 50px;
+
+  }
+
+  .flexbox:nth-child(11) div:nth-child(2){
+
+    flex-shrink: 5; /*e mais ou menos como o flex-grow mais ele distribui o expaço exedente do elemento pai obs: testar com a tela reduzida para ver o efeito ou mobile;*/
+
+  }
+
+  
+  .flexbox:nth-child(11) div:nth-child(4){
+
+    flex-shrink: 1;
+
+  }
+
+    .flexbox:nth-child(12) div{
+
+    background-color: indigo;
+    flex-basis: 100px;
+    height: 50px;
+
+  }
+
+  .flexbox:nth-child(12) div:nth-child(2){
+
+    flex-shrink: 5; 
+
+  }
+
+  
+  .flexbox:nth-child(12) div:nth-child(4){
+
+    flex-shrink: 1;
+    flex: 1 0 100px; /*a propriedade flex e o atalho para as tres propriedades flex e os valores são primeiro po valor de flex grow depois shrink e por ultimo o basis*/
+
+  }
+
+  .flexbox:nth-child(13) div:nth-child(2){
+
+    order: 1;/*usado para criar uma ordem nos elementos para organizalos no layout obs: por padrão os elementos não tem ordem entao caso tenha por exemplo 4 elementos no layout e você colocar essa ropriedade em apenas 1 ele ira altomatocamente para ultimo lugar pois os elementos sem essa propriedade vem primeiro obs: posso usar numeros negativos tambem e eles se comportão normalmente diferente dos positivos*/
+
+  }
+
+  .flexbox:nth-child(14){
+
+    align-items: flex-start;
+
+  }
+
+  .flexbox:nth-child(14) div:nth-child(2){
+
+    align-items: flex-start;
+    align-self: flex-end; /*usado pra tratar cada elemento individualmente obs: testar posibilidades das propriedades*/
+
+  }
+
+  /*demonstração que o justify e o align-items e mais que um movimentador ertival/horizontal*/
+
+
+  .flexbox:nth-child(15){
+
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;/*dessa forma eu mudei o eixo do meu flex box então o por exemplo o flex-basis em vez de determinar a largura do meu elemento ele esta controlando a altura*/
+
+  }
+
+  .flexbox:nth-child(15) div{
+
+    flex-basis: 70px;
+
+  }
+  

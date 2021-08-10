@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aulas modulo css</title>    
+
+
+  <style>
+    body{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: springgreen;
+    } /* se eu fizer dessa forma eu não vou conseguir mudar a cor dos links apenas dos outros elementos eu so vou conseguir mudar as cores dos link da forma  seguir */
+
+    a{
+      color: red;
+    } /* dessa forma ultilizando o seletor 'a' eu consigo fazer formatações nos meus links*/
+
+    a:hover{ /* usando o a:hover eu consigo editar oq acontece quando o usuario passa o mouse em cima do link */
+      background-color: grey;
+      color:darkgoldenrod
+    
+    }
+
+    a:visited{/* e dessa forma eu consigo editar oq acontece quando eu clico no link */
+      color:fuchsia
+    }
+
+    ul li{/* dessa forma eu formato as minhas lista que estão dentro da 'ul'*/
+      list-style-type: square ; /*sempre iremos usar a square, disc ou circle */
+
+    }
+
+    ol li{/* dessa forma eu formato apenas as listas que estão dentro da 'ol'*/ 
+      list-style-type: upper-roman;
+      list-style-position: inside; /* usando esse comando a lista fica um poco mais pra dentro da pagina*/
+
+
+
+    }
+
+
+  </style>
+</head>
+<body>
+  <a href="teste.html">teste 01 teste</a>|
+  <a href="teste.html">teste 02 teste</a>
+
+  <ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+  </ul>
+
+  <ol>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+  </ol>
+
+  <p>paragrafo qualquer apenas para demonstrar</p>
+  
+</body>
+</html>

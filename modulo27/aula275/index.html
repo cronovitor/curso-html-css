@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 275</title>
+
+  <style>
+
+    .done{
+
+      text-decoration: line-through;
+
+      color: #555;
+
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Aula 275</h1>
+
+    <input type="text" id="txtTask">
+
+    <button id="btn" focus>Cadastrar nova tarefa</button>
+
+    <ul>
+      <li>estudar JavaScript</li>
+      <li>estudar eventos em JavaScript</li>
+      <li>Jogar video-game</li>
+    </ul>
+
+  </div>
+  
+</body>
+
+<script>
+
+  (function(){
+
+    var $ul = document.querySelector('ul');
+
+    var $lis = $ul.querySelectorAll('li');
+
+    var $txtTask = document.querySelector('#txtTask');
+
+    var $btn = document.querySelector('#btn');
+
+    $btn.addEventListener('click', addTask);
+
+    $txtTask.addEventListener('keyup', function(e){
+
+      if(e.keyCode === 13){
+
+        addTask();
+
+      }
+
+    })
+
+    for(var i = 0; i < $lis.length; i++){
+
+      $lis[i].addEventListener('click', toogleDone)
+
+    }
+
+    function toogleDone(){
+
+      this.classList.toggle('done')
+
+    }
+
+    function addTask(){
+
+      var li = document.createElement('li');
+
+      var text = document.createTextNode($txtTask.value);
+
+      li.appendChild(text);
+
+      $ul.appendChild(li)
+
+      $txtTask.value = '';
+
+      $txtTask.focus();
+
+    }
+  })()
+
+</script>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 212</title>
+</head>
+<body>
+
+  <h1>aula 212</h1>
+
+  <div id="output"></div>
+  
+</body>
+
+<script>
+
+  var caneta = new Object();
+
+  caneta.nome = "caneta";
+
+  caneta.preco = 'R$ 1,50';
+
+  caneta.quantidade = 1000;
+
+  caneta.comprar = function(qtd){
+
+    if(!qtd) {
+
+      qtd = 1;
+
+    }
+
+    console.log('comprou uma caneta');
+
+    this.quantidade = this.quantidade - qtd;
+
+    //this.quantidade--;
+
+    console.log(this.quantidade);
+
+  }
+
+  var msg = '';
+
+  msg += 'nome: ' + caneta.nome + '<br>';
+
+  msg += 'preço: ' + caneta.preco + '<br>';
+
+  msg += 'quantidade: ' + caneta.quantidade + '<br>';
+
+  document.querySelector('#output').innerHTML = msg;
+
+  
+
+
+</script>
+</html>

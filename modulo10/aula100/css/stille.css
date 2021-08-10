@@ -1,0 +1,42 @@
+html{/*o html e nosso elemento root ou seja elemento raid nos usamos o elemento root para usar a unidade de medida "rem" como vai ser demonstrada aseguir*/
+
+  font-size: 32px;
+
+}
+
+body{
+
+  font: sans-serif 16px;
+
+}
+
+h1{
+
+  text-align: center;
+
+}
+
+div{ /*aqui estamos aprendendo a usar a unidade de medida em 'em': em a e unidade de medida baseada no tamanho da fonte que esta escrita 1em por padrão e 16px*/
+
+  border: 1px solid black;
+  padding: 1em;
+  width: 20em; /*20em são 320px*/
+  margin: 100px auto;
+  margin: 6.25em auto;/*aqui os dois tem o mesmo valor de 100px aqui o calculo esta sendo 100/16 que da o 6.25em pois o elemento pai que e o body esta com a fonte configurada em 100% ou seja 16px*/
+
+}
+
+p{
+
+  margin: 0;
+  line-height: 1.5;
+  font-size: 1.25em;/*1.25em e igual a 20px*/
+
+}
+
+a{
+  /*font-size: 24px; para fazer o calculo quanto e 24px aqui no 'a' tenho que levar em consideração que o elemento pai do a e o 'p' e o mesmo o font-size dele ja esta alterado para 1.25em ou seja 20px então eu tenho que fazer o calculo de 24/20 que da 1.2em */
+  font-size: 1.2em; /*1.2em aqui no 'a' e equivalente a 24px*/
+  font-size: 1rem;/*aqui esta usando rem ou seja esta herdando o tamanho da fonte do elemento raiz ou seja do html então o mesmo vai ter 32px igual ta configurado nosso elemento raiz*/
+
+}

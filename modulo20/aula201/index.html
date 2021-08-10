@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aula 198 exercicio</title>
+</head>
+
+<body>
+
+  <h1>exercicio</h1>
+
+  <button onclick="iniciarCalculo('+')"> + </button>
+
+  <button onclick="iniciarCalculo('-')"> - </button>
+
+  <button onclick="iniciarCalculo('/')"> / </button>
+
+  <button onclick="iniciarCalculo('*')"> x </button>
+
+
+  <div id="output"></div>
+
+  <script>
+
+    var n1 = prompt("Digite um numero");
+
+    n1 = parseFloat(n1);
+
+    escreve(n1);
+
+    function iniciarCalculo(simbolo){
+
+      var n2 = document.querySelector('#output').textContent;
+
+      n2 = parseFloat(n2)
+
+      var n1 = prompt('Digite outro numero')
+
+      n1 = parseFloat(n1)
+
+      var msg = calcular(simbolo, n1, n2)
+
+      escreve(msg);
+
+    }
+
+    function escreve(mensagem) {
+
+      var output = document.querySelector('#output');
+
+      output.innerHTML = mensagem;
+
+    }
+
+    function calcular(simbolo, n1, n2) {
+
+      var numeroCalculado = null;
+
+
+      switch (simbolo) {
+
+        case '+':
+
+          numeroCalculado = n2 + n1;
+
+          break;
+
+        case '-':
+
+          numeroCalculado = n2 - n1;
+
+          break;
+
+        case '/':
+
+          numeroCalculado = n2 / n1;
+
+          break
+
+        case '*':
+
+          numeroCalculado = n2 * n1;
+
+      }
+
+      return numeroCalculado;
+
+
+    }
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,407 @@
+/*
+Regras css:
+
+Por padrão não se aplica  propriedades de model box em elementos de linha
+
+a sintaxe e a seguinte:
+
+seletor {
+  propriedade: valor;
+'*{}' estrelinha seguida de chaves e o seletor universal do css ou seja ele seleciona todos os elementos presentes no html
+
+}
+
+
+DICA!!!!! sempre antes de formatar o ccs usar um normalizador: https://necolas.github.io/normalize.css/
+
+elemento:nth-child(): com o nth-child eu posso escolher qual elemento na minha tabela eu posso formatar por exemplo com 'odd' eu formato todos os elementos impares e com 'even' eu formato todos os elementos pares ou tambem posso  simplismentos colocar o numero do filho que eu quero formatar
+
+seletor: item no html a ser editado exemplo h1, no caso se eu colocar h1 no lugar do seletor o mesmo que sera editado
+propriedade: seleciona qual propriedade do item selecionado que sera editada exemplo 'text-decoration-color'
+valor: seria qual valor vai dar para a propriedade exemplo 'color: blue'
+obs: sempre terminar a sentença com ';' para não ter quebra no codigo 
+obs: posso selecionar mais de um seletor para fazer a formatação separando os mesmo por ',' exemplo: h1, body, h2{}
+
+
+Para selecionar uma classe para ser editada sempre usar '.nomedaclasse' sempre usar o '.'
+sempre que possivel usar classes ou id no html para ficar facil editar no arquivo css
+Para seleciona um id para ser editado no css usar '#' exemplo: '#nome_do_id'
+obs: apenas pode ter 1 valor de id por pagina ou seja não pode ter 2 id com o mesmo nome ou valor numerico
+
+
+posso editar todos os elementos de bady ultilizando a body {},
+
+*/
+
+/*
+Alguns comandos css:
+
+Fonts:
+font-family: define a familia da fonte (em outras palavras muda a fonte da escrita)
+font-size: define o tamanho da fonte
+font-style: define o estilo da fonte se e italico ou não
+font-variant: nesse comando temos o normal ou o small-caps no modo small-caps ele deixa as letras todas maiusculas
+
+Font: posso usar esse atalho pra representar qualquer formatação de fonte a cima apenas colocando o valor que eu deveria colocar nas formatações a cima
+
+text: 
+text-align: alinha o texto para direita ou para esquerda
+text-decoration: se quero meu texto sublinhado ou não
+text-indent: configura o tamanho do espaço no inicio dos paragrafos
+text-transform: muda o todo o texto para maiusculo ou minusculo
+text-shadow: essa propriedade recebe 4 valores o primeiro valor e um valor do eixo x que e o deslocamento horizontal segundo valor e no eixo y ou seja deslocamento da sombra na vertical o terceiro valor e o valor que representa o esfumaçamento ou seja o blur e por ultimo eu passo a cor a ser aplicada
+obs: posso fazer varias camadas assim como box-shadow basta apenas eu ir separando o conjunto de valores com uma ','
+
+color:
+alguns codigos de cores e exemplos
+rgb como funciona: 
+no caso no codigo color você pode usar o nome da cor exemplo: 'color: blue;', ou pode usar codigos hexadecimais
+exemplo:
+color:#FFFFFF no caso aqui a cor seria branca
+obs: hexamecimal funciona de 0 a 9 e de A a F sendo F o valor maximo e 0 o valor minimo
+exemplo de codigos de algumas cores
+#FFFFFF branco
+#FF0000 vermelho
+#00FF00 verde
+#0000FF azul
+#FFFF00 amarelo
+#FF00FF rosa
+#00FFFF azul claro/ciano
+
+no link asseguir tem mais combinações de cores e seus codigos:
+https://celke.com.br/artigo/tabela-de-cores-html-nome-hexadecimal-rgb
+
+
+!!! DICA: posso fazer um elemento herdar uma cor de outro elemento (caso os dois forem dependentes um do outro) basta usar a palavra inherit (demonstrado como no projeto strata)
+
+class: adiciona uma classe ao elemento para ficar mais facil a identificação (ou seja ele vai ser o identificador do seletor)
+obs: classe eu posso ter mais de uma diferente do 'id' aonde so posso ter 1 por pagina
+
+id: cria um identificador para o elemento ( so pode ter 1 id com o mesmo valor por pagina)
+
+background-color: muda a cor do fundo do seletor selecionado
+
+padding: e o espaço entre o conteudo e as bordas internas do elemento exemplo: o espaço do background de um H1
+
+height: configura a altura do elemento
+
+width: configura a largura do elemento
+
+margin: coloca um espaço esterno entre o elemento e as bordas da pagina exemplo: caso for aplicado em um h1 com background ele vai criar um espaço e mover o h1 e o background juntos diferente do padding que move o espaço dentro do background 
+obs: posso usar tambem uma medida de chamda 'em' que ele e medido apartir do tamanho da fonte do elemento em questão por exemplo: projeto strata formatação dos elemento h1 ao h6 com tamanhos diferentes de margin apartir do tamanho da fonte dos elementos
+resumo: a medida 'em' e sempre relativo ao font-size
+
+border: para a borda devemos sempre ultilizar 3 comandos para formar uma borda corretamente
+
+border-style: seleciona o estilo da borda
+border-width seleciona a espessura da borda
+border-color: seleciona a cor da borda
+obs: posso ultilizar a borda em apenas um lado exemplo: border-bottom-style:valor.
+obs: posso abreviar o codigo escrevendo apenas border: dotted(style) 5px(width) red(color);
+
+obs: os valores tanto de mangin,padding,height,width e border ultilizalos em 'px' (pixels) exemplo: padding: 50px 30px 50px 30px (seguindo o sentido horario: top, right, bottom, left., ou ultilizando o auto ou ultilizando apenas um valor univelsal exemplo: padding: 50px aqui vai criar o espaço de 50px em todas as direções
+
+box-sizing: border-box; usando o box-sizing: border-box eu consigo manter as proporções originais estabelecidas no meu seletor div por exemplo que esta com 150px de largura width: 150px e 100px de altura heigth: 150px e assim estabelecendo eles como a borda a ser respeitada
+
+cursor: com essa tag eu posso escolher como vai ser meu cursor quando ele passar sobre algum elemento que esteja configurado com essa tag
+
+list-style: codigos para formatar listas
+
+list-style-type: isso muda o estilo da bolinha que esta do lado dos itens da lista
+list-style-position: muda se o lugar da bolinha que fica ao lado da lista se ela vai ficar mais interna ou externa a lista
+list-style-image: e esse muda a imagem do que fica ao lado das lista ordenadas ('ol') mudando o numero por numero romado por exemplo
+
+background-img: url(...)
+obs: atenção não colocar espaço entre a letra 'l' e o porimeiro parentese '('
+obs: caso a imagem seja imeramente ilustrativa e não carregue nem uma informação relevante ao site ele pode ser carregada via csss
+
+background-image: linear-gradient (to top, cor, cor) e usado para criar um fundo misturando cores fazendo um degrade primeiro valor coloco a direção que vai depois separado por ',' coloco as cores separando cada uma com uma ','
+obs: posso usar mais de uma direção e mais de duas cores tambem
+obs: posso usar mais de uma linear-gradient () na mesmo background-image
+obs: posso usar o linear-gradient em conjunto com uma url() exemplo: background-image: linear-gradient (to top left, cor, cor), url();
+obs: tambem posso colocar valores em px ou em % nas cores para falar quanto cada uma vai ocupar em px exemplo background-image: linear-gradient (red 100px, blue 250px, greed 100px)
+
+'../' e usado para voltar para a pasta raiz por exemplo quando você estiver editando o css e quer colocar uma imagem de fundo no background e precisa voltar para a pasta raiz para celecionar a pasta imgs
+
+background-size: 300px; com esse comando eu controlo o tamanho ta imagem por exemplo com o valor de 300px
+
+background-repeat: repeat-y; esse comando vai repedir a imagem ou não no caso do valor repeat-y ele vai repetir apenas a imagem na primeira fileira da vertical caso queira que a imagem não se repita escreve no-repeat
+      
+background-size: cover; esse comando faz com que a imagem seja esticada e apenas perca um pedaço mais podemos reposisionala com o proximo comando
+
+background-position: right botton; no caso desse comando ele vai posisionar a imagem um pouco pra direita (eixo horizontal) e um pouco para baixo (eixo vertical) no caso dessa imagem ela ira mostrar um pedaço da ilha que tem na imagem
+
+background-attachment: fixed; dessa forma eu fixo a imagem apenas na porte que pode ser vista então caso eu meixa o scroll do mouse pra baixo eu vou ver mais ou menos uma repetição da imagem inicial
+
+background-color: rgba() ; dessa forma eu posso escolher a cor via rgb mais com uma transparencia a transparencia seria o quarto valor ou seja o 'a' e o valor 'a' vareia apena de 0 ou 1 o 1 sendo sem transparencia e o 0 com total transparencia então usar valores entre 0 e 1 ou seja 0.5 por exemplo
+
+!!!TRICK!!!
+
+posso usar o atalho background: e colocar os valores todos aqui por exemplo juntar back ground color com background img exemplo: background: #535353 url(../img/logo.jpeg)
+
+*/
+
+/*
+pseudo-classes em links: são classes que necessida da interação do usuario para que a formatação seja feita exemplo: quando o usuario passa o mouse ou clica em um link em uma pagina.
+
+sintaxe:
+
+a:link{}:
+a:visited{}: e quando o usuario ja visitou o link
+a:hover{}: e quando o usuario passar o mouse sobre o link
+a:active{}: e quando o usuario estiver com o mouse precionado sobre o link
+
+obs:entre o seletor e a pseudo-classe não existe espaço exemplo de como não fazer: 'a: hover{}'
+
+!!!DICA IMPORTANTE!!!
+no site aseguir tem diversas pseudo classes e a descrição de qual e o seu uso
+http://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes
+
+mais algumas pseudo-classes:
+
+:checked:  usado para formatar o input:checkbox apos ser clicado pelo usuario
+
+:disabled:  usado para formatar um botão que esteja marcado com o value disable no html
+
+:empty: usado por exemplo pra formatar um paragrafor que esteja vazio
+
+:focus: usado por exemplo para eu formatar um link ou campo aonde o usuario possa digitar uma menssagem por exemplo no input:type="text" ou simplimmente quando o usuario estiver com o mouse em cima de um link
+
+:hover: e mais ou menos a mesma coisa do focus
+
+:nth-child() : serve para eu selecionar qual filho do elemento eu quero formatar dentro '()' eu coloco o numero que representa o filho
+obs: se tiver <br> ou <hr> eles são contatos como filhos tambem
+
+:nth-of-type(): ele seleciona o filho por tags ou seja ele ignora o <br> e o <hr> ele não funciona com classes
+
+:first-child: serve para eu selecionar o primeiro filho por exemplo de uma dive formatar apenas aquele elemento
+
+:last-child: a mesma coisa do :first-child so que e o ultimo filho em vez do primeiro
+
+display:
+
+display: block; esse comando e usado para mudar um emento de linha para um elemento de block 
+display: inline; esse comando e usado para mudar um elemento de bloco para um elemento de linha
+display: inline-block; e usado para fazer o meio termo das duas propriedades acima
+display: none; ele retira do html a parte que esta sendo formatada com essa propriedade
+
+visibility: hidden; dessa forma aqui eu retiro a visibilidade do elemento ou seja ele não vai aparecer na tela mais seu espaço vai ficar reservado na tela
+*/
+
+/*
+float: e usado para fazer um elemento flutuar e se encaixar em outro elemento exemplo fazer um texto se encaixar e ficar flutuando do lado de uma imagem como ja foi visto
+obs: no caso o elemento que esta com float ele para de ser entendido como parte da div e no caso ele pode passar dos limites estabelecidos para a div em questão
+
+clear: usado para parar os efeitos do float exemplo '.div2{ float: left}' todas as divs que estão abaixo dessa div vão ser afetadas por esse float no caso eu uso .div3{clear: left} e da div3 pra baixo ele não sera afetada pelo float
+
+clear: both; : no caso do clear:both ele e usado quando vc formata por exemplo duas divs acima e quer parar de afetar as demais divs com o float por exemplo: .div1{float:right}, .div2{float:left}, .div3{clear:both} assim eu paro o efeito float apartir do .div3
+obs: caso eu use o both ele sempre vai limpar idependente se for left ou right 
+
+overflow: auto; aqui no caso o overflow esta sendo uma gambiara no float para o container consiga enchergar os floats começe a reservar espaço dentro dele para os floats
+
+*/
+
+/*
+position : posicionamento do elemento
+
+position: static; : e quando por padrão os elementos vão ficar igual estão dispostos no arquivo html ou seja na mesma posição
+
+position: relative; : e usado para mudar a posição do elementos em relação a si mesmo por exemplo: position: relative; left: 30px; top: 30px; o elemento ira andar 30px para a direita e 30px para baixo ou seja ele ira andar de forma trocada
+
+position: absolut; : e mais ou menos ao contrario do relative mais com uma regra ele vai sempre se relacionar com umelemento pai por exemplo: se tiver um elemento com position: relative ele ira se relacionar com ele agora caso não aja nem um elemento com position ele ira se relacionar com o body 
+
+position: fixed; : ele e usado para o elemento sempre ficar posicionado fixo na janela do browser e com o fixed acontece a mesma coisa que com o absolut ele vai sair do fluxo normal do documento e vai ser relacionar com o elemento pai a mesma forma que o absolut
+
+obs: posso usar valores negativos tambem ou seja as propriedades que forem de direções inversas exemplo o relative e so você usar valores negativos
+
+
+z-index: 0; : e usado para empilhar e posicionar os elementos um sobre o outro o padrão vem 0 mais quanto maior o numero mais 'prioridade' tem o item exemplo z-index: 3; fica em cima do z-index: 2;
+
+
+*/
+
+/*
+Overflow: e usado para tratar o conteudo que exede um determinado elemento os comandos são:
+
+overflow: visible : e para o conteudo continuar visivel mesmo exedendo a area de um determinado elemento
+
+overflow: hidden  : e para esconder o conteudo que estiver exedendo a area de um determinado elemento
+
+overflow: scroll  : ele encaixa o conteudo na area limite de um determinado elemento e cria uma barra de roagem para você poder visualizar todo o conteudo
+
+overflow: aulo  : ele e usado para caso precise de uma barra de rolagem ele ira colocar automaticamente 
+
+
+
+
+*/
+
+/*
+
+border-collapse: essa propriedade cria um espaço entre as celulas das minhas tabelas ou tira esse espaço caso eu preferir
+
+boder-collapse: separate : e o valor que ja vem padrão ele separa as celulas da minha tabela
+
+boder-collapse: collapse : esse valor tira o espaço que vem como padrão na minha tabela
+
+border-radius: e usado para aredondar as bordar regulando em pixels 'px' quanto maior mais redondo ate ficar totalmente redondo obs respeitanto o total de pixel da tag editada exemplo quero aredondar as pontas de um quadrado
+obs: posso usar % tambem 
+obs: posso editar cada lado individualmente igual outros atributos lembrando seguindo sentido horario
+obs: posso mesclar valores exemplo border-radius: 50px 100px / 100px 50px; aqui no caso os primeiros valores vão mexer no eixo x e o segundo valor vai mexer no eixo y
+
+box-shadow 10px 10px 0 back; com essa tag eu crio uma sombra do atributo em questão sempre ultilizar em conjunto com os atributos de deslocamento e por ultimo a cor como demonstrado no codigo
+obs: valores negativos vão pra direita e pra baixo e valores negativos vão pra esquerda e pra cima
+obs: o terceiro valor e o esfumaçamento posso colocar em px tambem ir testando ate alcançar o desejado
+obs: eu tambem posso colocar um quarto valor antes da cor para almentar/diminuir o tamanho da minha sombra valores positivos aumenta e valores negativos diminue
+obs: tambem posso criar varias sombras apenas tenho que separar com uma virgura e colocar os novos valores
+obs: sempre as primeiras sombras vão ficando em cima das ultimas então elas obedecem uma ordem de chegada 
+
+
+*/
+
+/*
+
+resize: none usado para tirar o ajuste de tamanho do meu textarea e deixar o tamanho fixo ja configurado no meu html/css
+
+*/
+
+/*
+@font-face : eu uso para criar/usar uma fonte personalizada.
+obs: deve ser usado junto com um font-family: ''; no qual eu devo colocar o nome da nova fonte e junto com um src: url() para encontrar o caminho do arquivo da nova fonte
+obs: para achar fontes sem direitos autorais ir nesse site: https://www.fontsquirrel.com/
+obs: em caso de duvidas visitar o : https://css-tricks.com/snippets/css/using-font-face/ para dicas de como ultilizar
+obs: para colocar as fontes os seja os src apenas o primeiro eu coloco com ';' no final o restante apenas separados por ',' e o final coloco mais um ';' exemplo: 
+font-family: 'nadia';
+  src: url(../fonts/nadia/nadia-serif.eot);
+  src: url(../fonts/nadia/nadia-serif.woff) format('woff'),
+  url(../fonts/nadia/nadia-serif.ttf) format('truetype'),
+  url(../fonts/nadia/nadia-serif.svg) format('svg');
+
+obs: sempre colocar um format para o browser sempre saber identificar qual arquivio ele da suporte e fazer o download apenas do arquivo suportado
+
+*/
+
+/*
+transition: e usado para fazer uma transisão de um elemento para outro uma especie de animação e para isso eu devo usar em conjunto com algumas propriedades
+
+transition-property:  ;  nessa tag eu coloco qual elemento vai ser usado para fazer a transição
+obs: posso animar mais de um elemento ao mesmo tempo ou posso tambem animar todos e so eu colocar o all na frente da sintaxe
+obs: como eu posso animar mais de um elemento ao mesmo tempo eu tambem posso ativar a animação em tempos diferentes das duas no durantion
+
+transition-duration:  ; nessa tag eu configuro a duração da minha transição pode ser em segundos 1s, .5s, 600s, pode ser em milisegundos 500ms, 1000ms 
+obs: quando eu quiser animar dois elementos ao mesmo tempo eu separo os tempo por ',' exemplo: transition-duration: 1s, 5s; o primeiro valor vai para o primeiro elemento sitado do property e o segundo valor vai parar o segundo
+
+transition-delay: ; serve para eu atrasar o inicio da animação e configurado igual ao duration
+obs: funciona da mesma forma do duration quando quero ultilizar em dois elementos mais com valores diferentes eu separo os valores com ','
+
+transition-timing-function: ; aqui eu irei configurar a passagem do tempo (ver quais funções usar junto) 
+obs: as funções para ultilizar junto ai transition-timing-function são:
+linear: para o tempo passar da mesma forma do começo ao fim
+ease: ele começa lento e acelera e desacelera no final
+ease-in: ele acelera e para bruscamento no final
+ease-out: ele começa rapido e vai desacelerando
+ease-in-out: ele acelera e desacelera de uma forma mais suave
+obs: para configurações especificas de aceleração e muito mais customizações de transition-timing-function visitar: https://cubic-bezier.com/
+obs: essas são as configurações do cubic bezier você so pega no site e coloca na frente da sintaxe exemplo: transition-timing-function: cubic-bezier(.08,1.05,.88,.04);
+obs: no caso eu posso ultilizar mais de um cubic bezier caso eu quero formatar dois elementos com cubic bezier diferentes eu apenas separo eles com ','
+*/
+
+/*seletores compostos:
+
+>: com o sinal de maior eu seleciono o filho direto
+
++: com o sinal de '+' eu seleciono o filho adjacente ou seja o proximo elemento (vimos isso no projeto strata)
+
+~: com o sinal de ~ eu seleciono todos os irmão proximo ao elemento exemplo h3 ~ p ou seja vai selecionar todos os p dentro do h3
+
+seletpores de atributos:
+
+[]: quando eu uso os coixetes no meu seletor por exemplo a[title]{}: eu estou selecionando apenas os 'a' que tem o atributo title ou seja quando uso [] eu seleciono apenas as tags que tem o atributo selecionado nos couxetes
+obs: posso usar em qualquer tag por exemplo img, p, a
+
+^: uso o ^ na sintaxe para selcionar um atributo que se inicia com alguma valor exemplo a[href^=http]{} ou seja estou selecionando apenas os 'a' que se inicião com http
+
+$: e ao contrario do ^ eu uso para selecionar o atributo que termina com determinado valor sintaxe: img[src$=".png"]{}: ou seja estou selecionando os img que termina com .png
+
+:not() esse e usado apos o elemento para selecionar tudo menos oq esta dentro dos '()' apos o not
+obs: posso usar em qualquer seletor p, img, etc,etc
+
+*/
+
+/* pseudo-elemento:
+before e after: 
+obs: toda vez que vou ultilizar as sub-classes before/after elas deverão ser seguidas da tag 'content:"";'
+obs: mesmo que não tenha conteudo no meu content ele deve existir quando eu usar as sub-classes before e after
+obs: o pseudo elemento diferente da pseudo classe tem q ter '::' antes de seguir a sintaxe do pseodo elemento
+!!!dica!!! content: "( " attr(href) " )"; com o attr(href) eu adicionei o href ao meu content o conteudo do meu () pode ser qualquer atributo
+
+alguns pseudo-elementos:
+
+::first-letter : para formatar apenas a primeira letra por exemplo de meu h1 ou do meu paragrafo
+
+::first-line : usada para formatar a primeira linha de um paragrafo por exemplo
+
+::selection : e para formatar aonde eu seleciono com meu mouse exemplo: quando eu seleciono um texto para compialo com ctrl+c
+obs: para funcionar no firefox voce tem que colocar -moz- na frente mais você tem q duplicar para funcionar exemplo vou ter que fazer um com -moz- e um sem
+
+
+!!!DICA IMPORTANTE!!!
+nesse site aseguir você pode ver outros pseudo-elementos e oq cada um deles faz
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-elementos
+
+
+*/
+
+/*Transform
+
+transform: translate(horizontal, vertical) com essa tag eu consigo mover meu elemento tanto quanto na vertical quanto na horizontal obs: usar valores negativos tambem para fazer movimentação perfeita
+transform: rotate(45deg): o rotate você rotaciona o elemento obs: usar 'deg' que e graus valores positivos rotaciona para direita e valores negativos para a esquerda
+transform-origin: left top; : o transform-origin eu uso combinado com por exemplo o rotate com o rotate ele muda o eyxo de rotação que o rotate tem como padrão que e o centro
+transform: rotate(30deg) translate(50%); : posso usar dessa forma combinando os dois mais a ordem e como estra escrito aqui no caso primeiro rotacionando e depois movendo e isso serve ao contrario tambem mais respeitando a ordem que esta escrito
+transform: skew() : com o skew eu consigo destorcer puxando as laterais na diagonal posso usar antes dos () X ou Y para controlar pra onde quero pugar ou horizontal ou vertical
+transform: scale(1) : com o scale eu consigo mudar a proporção do elento o valor 1 e o tamanho do proprio elemento e o 2 e o dobro e assim por adiante da mesma forma posso usar X Y para mudar apenas na horizontal ou na vertical posso tambem fazer no mesmo () apenas separando o eixo x do y com , assim (2, .6)
+
+*/
+
+
+/*tricks:
+
+.hidden{essa e uma forma de garantir que eu vou esconder meu texto mais o leitor de tela mesmo assim vai conseguir ler o conteudo diferente do display:block
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  display:block
+}
+
+.clearfix::after{ dessa forma que eu vou formatar meu float de agora em diante para eu não precisar usar o overflow 
+crie uma classe no elemento que esta sendo formatado com o float e depois usar essa sintaxe para formatalo para corrigir a grid do elemento
+
+  content: ' ';
+  display: block;
+  clear: both;
+
+}
+
+*/
+
+/*
+Media Queries: 
+
+@media: e a sintaxe usada antes de usar o atributo do media querie por exemplo a atributo screen
+exemplo de sintaxe::after
+
+@media screen and (min-width:1000px){
+com essa sintaxe do media querie eu estou fazendo o seguinte quando minha pagina estiver aparecendo em uma tela e tiver o min de largura de 1000px ele vai ficar laranja
+
+body{
+
+  background-color: orange;
+
+}
+
+}
+obs: eu posso ir colocando mais elementos e tags ali dentro da minha sintaxe do media querie
+
+
+
+*/
