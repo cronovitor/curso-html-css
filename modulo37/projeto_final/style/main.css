@@ -78,6 +78,14 @@ img{
 
 }
 
+.js .header{
+
+  position: fixed;
+
+  width: 100%;
+
+}
+
 .logo-text{
 
   text-transform: uppercase;
