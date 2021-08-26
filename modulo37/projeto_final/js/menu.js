@@ -14,7 +14,7 @@ function Menu(config){
 
   this.btn.removeAttribute('style');
 
-  closeMenu()
+  //closeMenu()
 
   if(this.maxWidth){
 
@@ -33,6 +33,12 @@ function Menu(config){
       }
 
     })
+
+    if(window.innerWidth <= _this.maxWidth){
+
+      closeMenu();
+
+    }
 
   }
 
